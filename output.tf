@@ -6,3 +6,8 @@ output "private_ipv4" {
 }
 
 
+output "mac_address" {
+  description = "Container MAC Address"
+  value       = proxmox_virtual_environment_container.lxc.network_interface.*.mac_address[0]
+}
+
